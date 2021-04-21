@@ -67,7 +67,7 @@ dist.poly.to.xy <- function(xy.data.file, poly.shape.file,
                       coords = c(label.long, label.lat))
   
   # If the CSV is encoded UTF-8, it injects junk text into the 1st column name
-  colnames(xy.data) <- gsub(pattern = "ï..", "", colnames(xy.data))
+  colnames(xy.data) <- gsub(pattern = "Ã¯..", "", colnames(xy.data))
   
   # Read in POLY data
   poly.shape <- st_read(dsn=poly.shape.file)
