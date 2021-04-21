@@ -107,9 +107,3 @@ st_write(blocks_to_libs,
          dsn = "Block_to_Library_Distance.shp",
          layer = "Distances",
          append=FALSE)
-         
-# Step 1 ####
-
-# Step 2 ####
-
-# Step 3 ####
