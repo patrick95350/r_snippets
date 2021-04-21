@@ -36,11 +36,6 @@ library(lwgeom)
 # Load Sourcefiles
 
 # User Parameters
-xy.data.file <- "Library Branches.csv"
-poly.shape.file <- "C:\\Users\\patri\\Desktop\\Redlining\\Maps\\Unzipped\\tl_2020_06_tabblock10\\tl_2020_06_tabblock10.shp"
-label.long <- "x"
-label.lat <- "y"
-xy.data.label <- c("FSCS_KEY", "FSCS_SEQ")
 
 # Custom Functions ####
 
@@ -67,7 +62,7 @@ dist.poly.to.xy <- function(xy.data.file, poly.shape.file,
                       coords = c(label.long, label.lat))
   
   # If the CSV is encoded UTF-8, it injects junk text into the 1st column name
-  colnames(xy.data) <- gsub(pattern = "Ã¯..", "", colnames(xy.data))
+  colnames(xy.data) <- gsub(pattern = "ï..", "", colnames(xy.data))
   
   # Read in POLY data
   poly.shape <- st_read(dsn=poly.shape.file)
