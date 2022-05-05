@@ -11,10 +11,11 @@
 #       n/a
 
 # Progress Bar ####
-progress_bar <- txtProgressBar(min=1,max=100, style=3)
+progress_bar <- txtProgressBar(min=1,max=1000, style=3)
 for(i in 1:1000){
-  Sys.sleep(1/100)
-  setTxtProgressBar(progress_bar, i/10)
+  Sys.sleep(1/1000)
+  message(i)
+  setTxtProgressBar(progress_bar, i)
 }
 
 # END OF FILE ####
