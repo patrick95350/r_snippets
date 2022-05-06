@@ -18,4 +18,13 @@ for(i in 1:1000){
   setTxtProgressBar(progress_bar, i)
 }
 
+# Time Elapsed ####
+
+start <- Sys.time()
+for(i in 1:10){
+  cat("Time Elapsed: ", round(Sys.time() - start))
+  Sys.sleep(1)
+  cat("\r")
+}
+
 # END OF FILE ####
